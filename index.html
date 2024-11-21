@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Kopi Biji Hujan menghadirkan kopi lezat, asli dari perkebunan">
+        <meta name="keywords" content="Biji Perkebunan, Kemasan Menarik, Berbagai Varian Kopi">
+        <meta name="author" content="Giovanni">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="./Asset/favicon.ico">
+        <link rel="stylesheet" href="index.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+        <title>Biji Hujan</title>
+    </head>
+    <body>
+        <header>
+            <div class="navigation">
+                <div class="navigation-container">
+                    <a href="#"><img src="./Asset/Logo.png" alt="logo"></a>
+                    <nav>
+                         <ul>
+                            <li><a href="#">Tentang</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Artikel</a></li>
+                            <li><a href="#">Outlet</a></li>
+                            <li><a href="#">Karir</a></li>
+                        </ul>
+                    </nav>
+                    <button class="navigation-button">Download App</button>
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="carousel-slides">
+                    <img src="./Asset/Carousel 1.png" alt="Carousel-1" width="100%">
+                </div>
+                <div class="carousel-slides">
+                    <img src="./Asset/Carousel 2.png" alt="Carousel-2" width="100%">
+                </div>
+                <div class="carousel-slides">
+                    <img src="./Asset/Carousel 3.png" alt="Carousel-3" width="100%">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="three-dot">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <script>
+                let slideIndex = [1];
+                let slideId = ["carousel-slides"]
+                showSlides(1, 0);
+
+                function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+                }
+
+                function showSlides(n, no) {
+                let i;
+                let x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) {slideIndex[no] = 1}    
+                if (n < 1) {slideIndex[no] = x.length}
+                for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+                }
+                x[slideIndex[no]-1].style.display = "block";  
+                }
+            </script>
+        </header>
+        <main>
+            <section class="about">
+                <div class="about-us">
+                    <img src="./Asset/Our Story.png" alt="about us">
+                    <div class="about-copywriting">
+                        <div class="about-text">
+                            <h1>Setiap Cangkir : Sebuah Perjalanan</h1>
+                            <p>Selamat datang di Biji Hujan—tempat di mana kopi bertemu dengan semangat. 
+                                Kami berkomitmen untuk membawa Anda dalam perjalanan rasa yang tak terlupakan dengan biji kopi pilihan dari berbagai penjuru Indonesia.
+                            </p>
+                            <p>Di sini, kami tidak hanya menyeduh kopi; kami merayakan setiap langkah dari prosesnya. 
+                                Mulai dari petani yang merawat kebun kopi dengan penuh dedikasi hingga roaster yang mengeluarkan cita rasa terbaik dari setiap biji kopi—semua dilakukan dengan cinta dan ketelitian.
+                            </p>
+                        </div>
+                        <button>Selengkapnya</button>
+                    </div>
+                </div>
+            </section>
+            <section class="news">
+                <div class="news-container">
+                    <div class="news-heading">
+                        <h1>News</h1>
+                        <h3>Dapatkan berita terbaru dan informasi menarik dari kami!</h3>
+                    </div>
+                    <div class="news-content">
+                        <article class="halal">
+                            <img src="./Asset/Halal Sertifikat.png">
+                            <div class="news-text">
+                                <h4>Biji Hujan Raih Sertifikat Halal</h4>
+                                <p class="news-caption">Pelanggan Biji Hujan tidak perlu ragu lagi dalam mengkonsumsi produk biji hujan.</p>
+                                <div class="line"></div>
+                                <p class="news-date">22 Agustus 2024</p>
+                            </div>
+                        </article>
+                        <article class="workshop">
+                            <img src="./Asset/Biji Hujan Academy.png">
+                            <div class="news-text">
+                                <h4>Intip Serunya Workshop Biji Hujan</h4>
+                                <p class="news-caption">Baru-baru ini, biji hujan menyelenggarakan workshop kopi di cabang kelapa gading.</p>
+                                <div class="line"></div>
+                                <p class="news-date">8 September 2024</p>
+                            </div>
+                        </article>
+                        <article class="marvel">
+                            <img src="./Asset/Marvel X Biji Hujan.png">
+                            <div class="news-text">
+                                <h4>Kolaborasi Epic: Marvel x Biji Hujan</h4>
+                                <p class="news-caption">Kolaborasi spesial antara marvel dan biji hujan menghadiri menu menarik terbaru.</p>
+                                <div class="line"></div>
+                                <p class="news-date">13 Oktober 2024</p>
+                            </div>
+                        </article>
+                    </div>
+                    <button>Selengkapnya</button>
+                </div>
+            </section>
+            <section class="cta">
+                <div class="cta-container">
+                    <div class="cta-content">
+                        <div class="cta-text">
+                            <div class="cta-heading">
+                                <h3>BIJI HUJAN APP</h3>
+                                <h1>Kopi Lebih Dekat, Lebih Mudah!</h1>
+                            </div>
+                            <div class="cta-benefit">
+                                <p>✨ Apa yang Bisa Anda Nikmati dengan Aplikasi Kami? ✨</p>
+                                <ul>
+                                    <li><Span>Pesan Kopi Favorit Anda</Span><br>
+                                        Dapatkan kopi segar yang baru dipanggang langsung diantar ke pintu Anda, kapan saja. 
+                                        Pilih dari berbagai varian biji kopi premium dari perkebunan terbaik di Indonesia.
+                                    </li>
+                                    <li><span>Eksklusif Promo dan Diskon</span><br>
+                                        Hanya di aplikasi! Dapatkan penawaran spesial dan diskon eksklusif setiap minggu untuk pelanggan setia.
+                                    </li>
+                                    <li><span>Kartu Loyalitas Digital</span><br>
+                                        Kumpulkan poin dari setiap pembelian, tukarkan dengan kopi gratis atau merchandise eksklusif. Semakin sering Anda menikmati kopi, semakin banyak keuntungan yang Anda dapatkan!
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cta-download">
+                            <h3>Unduh Sekarang!</h3>
+                            <div class="cta-button">
+                                <button class="google-play">
+                                    <img src="./Asset/google_play_icon.png" alt="g-play">
+                                    <div class="button-text">
+                                        <span class="text-1">GET IT ON</span>
+                                        <span class="text-2">Google Play</span>
+                                    </div>
+                                </button>
+                                <button class="apple-store">
+                                    <img src="./Asset/app_store_icon.png" alt="app-store">
+                                    <div class="button-text">
+                                        <span class="text-1">Download on the</span>
+                                        <span class="text-2">App Store</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="./Asset/Video download app.gif" alt="app-gif">
+                </div>
+            </section>
+            <section class="promo">
+                <div class="promo-container">
+                    <div class="promo-title">
+                        <h1>PROMO BIJI HUJAN</h1>
+                        <h2>Temukan berbagai promo menarik di sini!</h2>
+                    </div>
+                    <div class="promo-poster">
+                            <img src="./Asset/Promo 1.png" alt="promo-1">
+                            <img src="./Asset/Promo 2.png" alt="promo-2">
+                            <img src="./Asset/Promo 3.png" alt="promo-3">
+                    </div>
+                    <div class="promo-cta">
+                        <h3>Beli Disini!</h3>
+                        <div class="promo-action">
+                            <a href="#" class="promo-button">Outlet Terdekat</a>
+                            <a href="#" class="promo-button">Aplikasi Biji Hujan</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-content">
+                        <img src="./Asset/Logo.png" alt="logo">
+                        <div class="footer-contact">
+                            <h3>Hubungi Kami</h3>
+                            <div class="footer-location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span class="location-text">Taman Literasi Martha Tiahahu, Jl. Sultan Hasanudin Dalam, Blok M, Kebayoran Baru, Jakarta Selatan</span>
+                            </div>
+                            <br>
+                            <div class="footer-whatsapp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span class="whatsapp-text">0812-3456-789</span>
+                            </div>
+                        </div>
+                        <div class="footer-complaints-contact">
+                            <h3>Layanan Pengaduan Konsumen</h3>
+                            <p>Direktorat Jendral Perlindungan Konsumen dan Tertib Niaga Kementerian Perdagangan Republik Indonesia</p>
+                            <p><a href="#">0853 1111 1010</a>(Whatsapp)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <strong>@2024 Biji Hujan, All Rights Reserved</strong>
+                </div>
+            </footer>
+    </body>
+</html>
