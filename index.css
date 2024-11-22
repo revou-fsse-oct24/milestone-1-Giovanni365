@@ -21,6 +21,13 @@ body {
     background-color: var(--background);
 }
 
+@media only screen and (max-width: 640px) {
+    body {
+        height: 100%;
+        width: 622px;
+    }
+}
+
 /*Header Navigation*/
 header {
     display: flex;
@@ -104,50 +111,40 @@ li>a:hover::after{
     color: #ffffff;
 }
 
-/*Header Carousel*/
-.carousel {
-    position:relative;
+@media only screen and (max-width: 640px) {
+    .navigation {
+        max-width: 622px;
+        width: 100%;
+    }
+    
+    .navigation-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    ul {
+        gap: 20px;
+    }
+
+    li>a {
+        font-size: 1rem;
+    }
+
+    .navigation-button {
+        display: none;
+    }
+
+    .navigation-container img {
+        width: 50px;
+        height: 50px;
+        margin-left: 30px;
+    }
 }
 
-
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    padding: 5px 10px;
-    border-radius: 3px;
-    color: white;
-    font-weight: bold;
-    font-size: 2rem;
-    user-select: none;
-    margin: 0 10px;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px;
-    margin-bottom: 25px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(215, 255, 213, 0.8);
-    transition: 0.9s ease;
-}
-
-.three-dot {
-    text-align: center;
-    transform: translate(0, -30px);
-}
-
-.dot {
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    display: inline-block;
+.carousel>img {
+    width: 100%;
 }
 
 /*Section: About*/
@@ -169,7 +166,7 @@ li>a:hover::after{
 
 .about-text {
     text-align: justify;
-    margin: 0 50px;
+    margin: 0 05px;
 }
 
 .about-text>h1 {
@@ -202,6 +199,44 @@ li>a:hover::after{
     background-color: transparent;
     border: 3px solid #27610a;
     color: #27610a;
+}
+
+@media only screen and (max-width: 640px) {
+    .about {
+        width: 622px;
+        margin: 20px 0;
+    }
+
+    .about-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .about-text {
+        width: 450px;
+        margin: 0;
+    }
+
+    .about-text>h1 {
+        font-size: 4vh;
+        text-align: center;
+        color:#27610a;
+    }
+
+    .about-us>img {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        margin-top: 30px;
+    }
+
+    .about-copywriting>button {
+        display: inline;
+        margin: 10px 150px;
+    }
 }
 
 /*Section: News*/
@@ -239,7 +274,7 @@ li>a:hover::after{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
 }
 
 article {
@@ -286,6 +321,7 @@ article {
 
 article:hover {
     box-shadow: 5px 5px 20px #acb5a6;
+    height: 100%;
 }
 
 .news-container>button {
@@ -306,6 +342,59 @@ article:hover {
     background-color: transparent;
     border: 3px solid #27610a;
     color: #27610a;
+}
+
+@media only screen and (max-width: 640px) {
+    .news {
+        height: 1950px;
+    }
+
+    .news-container {
+        background-image: linear-gradient(180deg,var(--background), #e8ffdf, var(--background));
+        width: 622px;
+        margin: 10px 0;
+    }
+
+    .news-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .news-heading>h1 {
+        font-size: 3rem;
+        color: #27610a;
+        text-shadow: 2px 2px #afb2ad;
+        margin: 10px 0;
+    }
+
+    .news-heading>h3 {
+        color: rgb(109, 91, 11);
+        font-size: 1rem;
+    }
+
+    .news-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: -150px;
+    }
+
+    article {
+        cursor: pointer;
+        border-radius: 20px;
+        background-color: #ffffff;
+        box-shadow: 5px 5px 5px #acb5a6;
+        overflow: hidden;
+        width: 400px;
+        transform: scale(0.7);
+    }
+
+    .news-container>button {
+        display: none;
+    }
 }
 
 /*Section: CTA*/
@@ -395,7 +484,7 @@ button img {
     color: #000;
 }
 
-.cta-container>img {
+.cta-container img {
     max-width: 330px; 
     max-height: 450px;
 }
@@ -412,6 +501,32 @@ button img {
 .text-2 {
     font-weight: 700;
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 640px) {
+    .cta {
+        height: 1000px;
+        background-image: linear-gradient(180deg,var(--background), #e8ffdf, var(--background));
+    }
+    
+    .cta-container {
+        display:flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 622px;
+        gap: 40px;
+    }
+
+    .cta-text {
+        text-align: justify;
+        margin: 0 50px;
+    }
+
+    .cta-container srcset {
+        max-width: 200px; 
+        max-height: 280px;
+    }
+
 }
 
 /*Section: promo*/
@@ -496,6 +611,38 @@ button img {
     color: #27610a;
 }
 
+@media only screen and (max-width: 640px) {
+    .promo {
+        height: 1350px;
+    }
+
+    .promo-container {
+        background-image: none;
+        width: 500px;
+        border: 4px solid #27610a;
+    }
+
+    .promo-title>h1 {
+        font-size: 3rem;
+    }
+
+    .promo-title>h2 {
+        font-size: 1rem;
+    }
+
+    .promo-poster {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .promo-poster>img {
+        height: 300px;
+        width: 300px;
+    }
+}
+
 /*Footer*/
 .footer-container {
     background-color: #f3fff0;
@@ -551,4 +698,25 @@ button img {
     vertical-align: middle;
     padding: 15px 0;
     background-color: var(--secondary);
+}
+
+@media only screen and (max-width: 640px) {
+    .footer-content {
+        margin: 0 10px;
+    }
+    
+    .footer-content>img {
+        display: none;
+        font-size: 0.7rem;
+    }
+
+    .footer-content h3 {
+        font-size: 1rem;
+    }
+
+    .location-text, .whatsapp-text, .complaint-text, .complaint-whatsapp {
+        font-size: 0.8rem;
+        margin-right: 20px;
+    }
+
 }

@@ -29,43 +29,8 @@
                 </div>
             </div>
             <div class="carousel">
-                <div class="carousel-slides">
-                    <img src="./Asset/Carousel 1.png" alt="Carousel-1" width="100%">
-                </div>
-                <div class="carousel-slides">
-                    <img src="./Asset/Carousel 2.png" alt="Carousel-2" width="100%">
-                </div>
-                <div class="carousel-slides">
-                    <img src="./Asset/Carousel 3.png" alt="Carousel-3" width="100%">
-                </div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <img src="./Asset/Carousel 1.png" alt="Carousel-1">
             </div>
-            <div class="three-dot">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-            <script>
-                let slideIndex = [1];
-                let slideId = ["carousel-slides"]
-                showSlides(1, 0);
-
-                function plusSlides(n, no) {
-                showSlides(slideIndex[no] += n, no);
-                }
-
-                function showSlides(n, no) {
-                let i;
-                let x = document.getElementsByClassName(slideId[no]);
-                if (n > x.length) {slideIndex[no] = 1}    
-                if (n < 1) {slideIndex[no] = x.length}
-                for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-                }
-                x[slideIndex[no]-1].style.display = "block";  
-                }
-            </script>
         </header>
         <main>
             <section class="about">
@@ -167,7 +132,10 @@
                             </div>
                         </div>
                     </div>
-                    <img src="./Asset/Video download app.gif" alt="app-gif">
+                    <picture>
+                        <source media="(max-width: 650px)" srcset="./Asset/Mobile-download-app.png" alt="app-mobile">
+                        <img src="./Asset/Video download app.gif" alt="app-gif">
+                    </picture>
                 </div>
             </section>
             <section class="promo">
@@ -208,8 +176,8 @@
                         </div>
                         <div class="footer-complaints-contact">
                             <h3>Layanan Pengaduan Konsumen</h3>
-                            <p>Direktorat Jendral Perlindungan Konsumen dan Tertib Niaga Kementerian Perdagangan Republik Indonesia</p>
-                            <p><a href="#">0853 1111 1010</a>(Whatsapp)</p>
+                            <p class="complaint-text">Direktorat Jendral Perlindungan Konsumen dan Tertib Niaga Kementerian Perdagangan Republik Indonesia</p>
+                            <p class="complaint-whatsapp"><a href="#">0853 1111 1010</a>(Whatsapp)</p>
                         </div>
                     </div>
                 </div>
@@ -217,5 +185,6 @@
                     <strong>@2024 Biji Hujan, All Rights Reserved</strong>
                 </div>
             </footer>
+          </main>  
     </body>
 </html>
